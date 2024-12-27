@@ -1,4 +1,3 @@
-import React from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from '../hooks/useTheme';
 
@@ -8,13 +7,13 @@ export function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-lg bg-nord-8/10 hover:bg-nord-8/20 transition-colors"
+      className="p-3 rounded-full bg-nord-8/10 dark:bg-nord-8/20 hover:bg-nord-8/20 dark:hover:bg-nord-8/30 transition-all ease-in-out duration-300"
       aria-label="Toggle theme"
     >
       {theme === 'dark' ? (
-        <Sun className="h-5 w-5 text-nord-4" />
+        <Sun className="h-6 w-6 text-nord-4 transition-transform transform rotate-0 dark:rotate-180" />
       ) : (
-        <Moon className="h-5 w-5 text-nord-4" />
+        <Moon className="h-6 w-6 text-nord-4 transition-transform transform rotate-360 dark:rotate-360" />
       )}
     </button>
   );

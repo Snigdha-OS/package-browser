@@ -1,4 +1,3 @@
-import React from 'react';
 import { Package } from '../types';
 import { PackageCard } from './PackageCard';
 

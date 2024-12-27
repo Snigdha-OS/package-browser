@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Header } from './components/Header';
 import { SearchBar } from './components/SearchBar';
 import { PackageList } from './components/PackageList';
@@ -40,14 +40,14 @@ export default function App() {
       <footer className="bg-nord-5 dark:bg-nord-1 border-t border-nord-4 dark:border-nord-2 mt-12 transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <p className="text-center text-sm text-nord-3 dark:text-nord-4">
-            Data sourced from the{' '}
+            Data Source: {' '}
             <a
-              href="https://github.com/archlinux/svntogit-packages"
+              href="https://github.com/Snigdha-OS/snigdhaos-core"
               className="text-nord-10 hover:text-nord-9 dark:text-nord-8 dark:hover:text-nord-7"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Arch Linux Package Repository
+              Snigdha OS Package Repository
             </a>
           </p>
         </div>

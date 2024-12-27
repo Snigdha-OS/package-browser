@@ -1,5 +1,3 @@
-import React from 'react';
-import { Database } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 import { Logo } from './Logo';
 

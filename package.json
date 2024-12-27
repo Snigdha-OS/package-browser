@@ -1,15 +1,27 @@
 {
-  "name": "vite-react-typescript-starter",
+  "name": "package-browser",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://Snigdha-OS.github.io/package-browser",
+  "author": {
+    "name": "RiO",
+    "email": "rio@snigdhaos.org",
+    "url": "https://github.com/d3v1l0n",
+    "github": "https://github.com/d3v1l0n",
+    "twitter": "@d3v1l0n",
+    "bio": "A passionate developer focused on open-source contributions and building tools for the community."
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "gh-pages": "^6.2.0",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

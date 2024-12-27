@@ -2,13 +2,61 @@
 <html lang="en" class="light">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Browse and explore Snigdha OS packages easily with this lightweight package viewer." />
+    <meta name="author" content="Eshan Roy" />
+    
+    <!-- Open Graph Meta Tags for social media sharing -->
+    <meta property="og:title" content="Snigdha OS Packages" />
+    <meta property="og:description" content="Explore a curated list of Snigdha OS packages with ease." />
+    <meta property="og:image" content="https://example.com/path/to/og-image.jpg" />
+    <meta property="og:url" content="https://your-website.com" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Snigdha OS Packages" />
+    <meta name="twitter:description" content="Explore a curated list of Snigdha OS packages with ease." />
+    <meta name="twitter:image" content="https://example.com/path/to/twitter-image.jpg" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- Google Fonts (with preconnect to Google) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <title>Arch Linux Packages</title>
+
+    <!-- Title -->
+    <title>Snigdha OS Packages</title>
+
+    <!-- Dark Mode CSS (optional, if you have a dark mode stylesheet) -->
+    <link rel="stylesheet" href="/path/to/dark-mode.css" />
+
   </head>
   <body>
+    <!-- Main Application Root Element -->
     <div id="root"></div>
+
+    <!-- Script for Application -->
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Optional: Script to toggle between dark and light mode -->
+    <script>
+      // Script to toggle light/dark mode based on user preference
+      const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const htmlElement = document.documentElement;
+
+      // Set the initial theme based on system preference
+      if (userPrefersDark) {
+        htmlElement.classList.remove('light');
+        htmlElement.classList.add('dark');
+      }
+
+      // Optional: Toggle theme dynamically if desired
+      // htmlElement.addEventListener('click', () => {
+      //   htmlElement.classList.toggle('dark');
+      //   htmlElement.classList.toggle('light');
+      // });
+    </script>
   </body>
 </html>

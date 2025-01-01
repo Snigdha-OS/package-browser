@@ -1,8 +1,8 @@
 import { Package } from '../types';
 
 const MIRRORS = [
-  'https://raw.githubusercontent.com/d3v1l0n/snigdhaos-core/refs/heads/master/packages.txt',
-  'https://raw.githubusercontent.com/archlinux/svntogit-packages/master/packages.txt'
+  'https://raw.githubusercontent.com/Snigdha-OS/snigdhaos-core/refs/heads/master/packages.txt',
+  // 'https://raw.githubusercontent.com/archlinux/svntogit-packages/master/packages.txt'
 ];
 
 async function fetchFromMirror(url: string): Promise<Package[]> {

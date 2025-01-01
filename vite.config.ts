@@ -10,9 +10,9 @@ export default defineConfig({
     rollupOptions: {
       output: {
         // Entry file for JavaScript
-        entryFileNames: 'main.js', // Ensure JS is named main.js
+        entryFileNames: 'script.js', // Ensure JS is named script.js
         // Chunk file names if you want to bundle them together (optional)
-        chunkFileNames: 'main.js', // All chunks will go into main.js (optional, use with caution)
+        chunkFileNames: 'script.js', // All chunks will go into script.js (optional, use with caution)
         // Asset file names (CSS)
         assetFileNames: 'style.css', // Ensure CSS is named style.css
       },

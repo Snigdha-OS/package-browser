@@ -24,13 +24,23 @@ async function fetchFromMirror(url: string): Promise<Package[]> {
 }
 
 export async function fetchPackages(): Promise<Package[]> {
+  let packages: Package[] = [];
+  
+  // Try each mirror and accumulate results
   for (const mirror of MIRRORS) {
     try {
-      return await fetchFromMirror(mirror);
+      const result = await fetchFromMirror(mirror);
+      packages = packages.concat(result); // Append to packages array
     } catch (error) {
       console.warn(`Failed to fetch from mirror ${mirror}:`, error);
-      continue;
+      continue; // Continue to the next mirror if this one fails
     }
   }
-  throw new Error('All mirrors failed to respond');
+
+  // If no successful fetch, throw an error
+  if (packages.length === 0) {
+    throw new Error('All mirrors failed to respond');
+  }
+  
+  return packages;
 }

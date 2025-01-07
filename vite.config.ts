@@ -24,4 +24,8 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'], // Exclude lucide-react from pre-bundling
   },
+
+  server: {
+    open: true, // Automatically open the browser
+  },
 });

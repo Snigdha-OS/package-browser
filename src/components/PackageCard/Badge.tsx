@@ -6,7 +6,7 @@ interface BadgeProps {
 
 export function Badge({ children }: BadgeProps) {
   return (
-    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-nord-8/10 dark:bg-nord-8/20 text-nord-10 dark:text-nord-8">
+    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-nord-7 to-nord-8/80 dark:from-nord-8/50 dark:to-nord-9/80 text-nord-0 dark:text-nord-6 shadow-md hover:shadow-lg transition-all duration-300">
       {children}
     </span>
   );

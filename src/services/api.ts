@@ -9,6 +9,9 @@ async function fetchFromMirror(url: string): Promise<Package[]> {
   const response = await fetch(url);
   const text = await response.text();
   
+  // determine the repository from the mirror URL (core or extra)
+  const repository = url.includes('snigdhaos-core') ? 'core' : 'extra';
+  
   return text
     .split('\n')
     .filter(Boolean)
@@ -18,7 +21,7 @@ async function fetchFromMirror(url: string): Promise<Package[]> {
         name,
         version,
         description: descParts.join(' '),
-        repository: 'core' as const,
+        repository, // use the determined repository name
       };
     });
 }

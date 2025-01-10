@@ -11,11 +11,11 @@ export function PackageCard({ package: pkg }: PackageCardProps) {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="bg-gradient-to-b from-nord-5 to-nord-6 dark:from-nord-1 dark:to-nord-2 rounded-xl shadow-lg border border-nord-4 dark:border-nord-2 hover:shadow-xl transition-all duration-300 overflow-hidden">
+    <div className="bg-gradient-to-b from-nord-5 to-nord-6 dark:from-nord-1 dark:to-nord-2 rounded-xl shadow-xl border border-nord-4 dark:border-nord-2 hover:shadow-2xl transform transition-all duration-300 overflow-hidden hover:scale-105">
       {/* Header Section */}
       <div className="p-6 flex items-start gap-4">
         {/* Icon Section */}
-        <div className="flex-shrink-0 p-4 bg-nord-8/10 dark:bg-nord-8/20 rounded-full shadow-md">
+        <div className="flex-shrink-0 p-4 bg-nord-8/10 dark:bg-nord-8/20 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110">
           <Box className="h-6 w-6 text-nord-7 dark:text-nord-6" />
         </div>
 
@@ -29,27 +29,27 @@ export function PackageCard({ package: pkg }: PackageCardProps) {
               {pkg.version}
             </span>
           </div>
-          <p className="mt-2 text-sm text-nord-2 dark:text-nord-4 line-clamp-2">
+          <p className="mt-2 text-sm text-nord-2 dark:text-nord-4 line-clamp-2 transition-all duration-300 hover:text-nord-9 dark:hover:text-nord-7">
             {pkg.description}
           </p>
 
           {/* Footer Section */}
           <div className="mt-4 flex items-center justify-between">
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-nord-7 to-nord-8 dark:from-nord-8/30 dark:to-nord-9 text-nord-0 dark:text-nord-6 shadow">
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-nord-7 to-nord-8 dark:from-nord-8/30 dark:to-nord-9 text-nord-0 dark:text-nord-6 shadow-lg transform transition-all duration-300 hover:scale-105">
               {pkg.repository}
             </span>
             <button
               onClick={() => setExpanded(!expanded)}
-              className="text-nord-9 dark:text-nord-8 hover:text-nord-10 dark:hover:text-nord-7 flex items-center gap-2 text-sm font-medium transition-all duration-300"
+              className="text-nord-9 dark:text-nord-8 hover:text-nord-10 dark:hover:text-nord-7 flex items-center gap-2 text-sm font-medium transition-all duration-300 hover:scale-105"
             >
               {expanded ? (
                 <>
-                  <ChevronUp className="h-5 w-5" />
+                  <ChevronUp className="h-5 w-5 animate-bounce" />
                   Hide Installation
                 </>
               ) : (
                 <>
-                  <ChevronDown className="h-5 w-5" />
+                  <ChevronDown className="h-5 w-5 animate-bounce" />
                   Show Installation
                 </>
               )}

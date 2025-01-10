@@ -22,7 +22,7 @@ export function Header({ onRepositoryChange }: HeaderProps): JSX.Element {
           {/* Repository Filter Dropdown */}
           <div>
             <select onChange={
-                (e) => onRepositoryChange(e.target.value as Repository
+                (e) => onRepositoryChange(e.target.value as Repository)
             } defaultValue="all" className="bg-nord-5 dark:bg-nord-1 text-black dark:text-white border-2 border-nord-4 dark:border-nord-2 rounded-lg py-2 px-4 focus:ring-2 focus:ring-nord-8">
                 {Object.values(Repository).map((repository) => (
                     <option key={repository} value={repository}>{((repository === Repository.All) ? 'All Repositories' : repository.charAt(0).toUpperCase() + repository.slice(1))}</option>

@@ -1,5 +1,11 @@
 // Type alias for repository categories
-export type Repository = 'core' | 'extra' | 'community' | 'multilib';
+export enum Repository {
+    All       = 'all',
+    Core      = 'core',
+    Extra     = 'extra',
+    Community = 'community',
+    Multilib  = 'multilib'
+}
 
 // Interface representing a single package
 export interface Package {

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { SearchBar } from './components/SearchBar';
 import { PackageList } from './components/PackageList';
@@ -7,43 +7,57 @@ import { usePackages } from './hooks/usePackages';
 export default function App() {
   const { packages, loading, error } = usePackages();
   const [search, setSearch] = useState('');
+  const [selectedRepository, setSelectedRepository] = useState<'core' | 'extra' | 'all'>('all');
+  const [debouncedSearch, setDebouncedSearch] = useState(search);
 
-  // Filter packages based on search query
-  const filteredPackages = packages.filter((pkg) =>
-    pkg.name.toLowerCase().includes(search.toLowerCase()) ||
-    pkg.description.toLowerCase().includes(search.toLowerCase())
-  );
+  // Debounce search to optimize performance
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setDebouncedSearch(search);
+    }, 300); // Wait for 300ms after the last keystroke
+    return () => clearTimeout(timeoutId);
+  }, [search]);
+
+  // Filter packages based on search query and selected repository
+  const filteredPackages = packages
+    .filter((pkg) => {
+      // Filter by repository
+      if (selectedRepository !== 'all' && pkg.repository !== selectedRepository) {
+        return false;
+      }
+      // Filter by search query
+      return pkg.name.toLowerCase().includes(debouncedSearch.toLowerCase()) || 
+             pkg.description.toLowerCase().includes(debouncedSearch.toLowerCase());
+    });
+
+  const handleSearchChange = (value: string) => {
+    setSearch(value);
+  };
+
+  const handleRepositoryFilterChange = (repo: 'core' | 'extra' | 'all') => {
+    setSelectedRepository(repo);
+  };
 
   return (
-    <div
-      className="min-h-screen bg-nord-6 dark:bg-nord-0 transition-colors"
-      role="main"
-    >
-      <Header />
+    <div className="min-h-screen bg-nord-6 dark:bg-nord-0 transition-colors" role="main">
+      <Header onRepositoryChange={handleRepositoryFilterChange} />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Search Bar */}
         <div className="mb-8">
-          <SearchBar value={search} onChange={setSearch} />
+          <SearchBar value={search} onChange={handleSearchChange} />
         </div>
 
         {/* Package Counter */}
         <div className="mb-4 flex items-center justify-between">
-          <p
-            className="text-sm text-nord-3 dark:text-nord-4"
-            aria-live="polite"
-          >
-            Showing {filteredPackages.length} package
-            {filteredPackages.length !== 1 ? 's' : ''}
+          <p className="text-sm text-nord-3 dark:text-nord-4" aria-live="polite">
+            Showing {filteredPackages.length} package{filteredPackages.length !== 1 ? 's' : ''}
           </p>
         </div>
 
         {/* Error State */}
         {error ? (
-          <div
-            className="rounded-lg bg-nord-11/10 dark:bg-nord-11/20 p-4 text-nord-11"
-            role="alert"
-          >
+          <div className="rounded-lg bg-nord-11/10 dark:bg-nord-11/20 p-4 text-nord-11" role="alert">
             <p>An error occurred while fetching packages: {error}</p>
             <button
               onClick={() => window.location.reload()}

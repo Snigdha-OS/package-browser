@@ -4,10 +4,14 @@ import { SearchBar } from './components/SearchBar';
 import { PackageList } from './components/PackageList';
 import { usePackages } from './hooks/usePackages';
 
+import {
+    Repository
+} from './types';
+
 export default function App() {
   const { packages, loading, error } = usePackages();
   const [search, setSearch] = useState('');
-  const [selectedRepository, setSelectedRepository] = useState<'core' | 'extra' | 'all'>('all');
+  const [selectedRepository, setSelectedRepository] = useState('all');
   const [debouncedSearch, setDebouncedSearch] = useState(search);
 
   // Debounce search to optimize performance
@@ -34,7 +38,7 @@ export default function App() {
     setSearch(value);
   };
 
-  const handleRepositoryFilterChange = (repo: 'core' | 'extra' | 'all') => {
+  const handleRepositoryFilterChange = (repo: Repository) => {
     setSelectedRepository(repo);
   };
 

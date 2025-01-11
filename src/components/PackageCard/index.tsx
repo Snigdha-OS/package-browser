@@ -37,6 +37,7 @@ export function PackageCard({ package: pkg }: PackageCardProps) {
               <ExpandButton
                 expanded={expanded}
                 onClick={() => setExpanded(!expanded)}
+                aria-label={expanded ? 'Collapse package details' : 'Expand package details'}
               />
             </div>
           </div>

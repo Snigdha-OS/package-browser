@@ -12,6 +12,17 @@
     "twitter": "@d3v1l0n",
     "bio": "A passionate developer focused on open-source contributions and building tools for the community."
   },
+  "contributors": [
+    {
+      "name": "eshanized",
+      "email": "eshan@snigdhaos.org",
+      "url": "https://github.com/eshanized"
+    },
+    {
+      "name": "XlebyllleK",
+      "url": "https://github.com/XlebyllleK"
+    }
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",

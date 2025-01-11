@@ -1,12 +1,16 @@
-import React from 'react';
+import {
+    useState,
+    JSX
+} from 'react';
+
 import { Terminal, Copy, Check } from 'lucide-react';
 
 interface InstallGuideProps {
   packageName: string;
 }
 
-export function InstallGuide({ packageName }: InstallGuideProps) {
-  const [copied, setCopied] = React.useState(false);
+export function InstallGuide({ packageName }: InstallGuideProps): JSX.Element {
+  const [copied, setCopied] = useState(false);
 
   const command = `sudo pacman -S ${packageName}`;
 

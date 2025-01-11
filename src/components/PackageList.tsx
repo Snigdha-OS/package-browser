@@ -1,3 +1,7 @@
+import {
+    JSX
+} from 'react';
+
 import { Package } from '../types';
 import { PackageCard } from './PackageCard';
 
@@ -6,7 +10,7 @@ interface PackageListProps {
   loading: boolean;
 }
 
-export function PackageList({ packages, loading }: PackageListProps) {
+export function PackageList({ packages, loading }: PackageListProps): JSX.Element {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-64">

@@ -1,11 +1,14 @@
 // Type alias for repository categories
 export enum Repository {
-    All       = 'all',
-    Core      = 'core',
-    Extra     = 'extra',
-    Community = 'community',
-    Multilib  = 'multilib'
+    ALL       = 'all',
+    CORE      = 'core',
+    EXTRA     = 'extra',
+    COMMUNITY = 'community',
+    MULTILIB  = 'multilib'
 }
+
+// Type alias for UI themes
+export type Theme = ('light' | 'dark');
 
 // Interface representing a single package
 export interface Package {

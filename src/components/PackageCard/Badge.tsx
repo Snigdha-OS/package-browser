@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {
+    JSX
+} from 'react';
 
 interface BadgeProps {
   children: React.ReactNode;
@@ -20,7 +22,7 @@ const sizeClasses = {
   large: 'text-base px-4 py-2',
 };
 
-export function Badge({ children, color = 'default', size = 'medium', ariaLabel }: BadgeProps) {
+export function Badge({ children, color = 'default', size = 'medium', ariaLabel }: BadgeProps): JSX.Element {
   const badgeColorClass = colorClasses[color] || colorClasses.default;
   const badgeSizeClass = sizeClasses[size] || sizeClasses.medium;
 

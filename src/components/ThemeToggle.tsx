@@ -1,7 +1,11 @@
+import {
+    JSX
+} from 'react';
+
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from '../hooks/useTheme';
 
-export function ThemeToggle() {
+export function ThemeToggle(): JSX.Element {
   const { theme, toggleTheme } = useTheme();
 
   return (

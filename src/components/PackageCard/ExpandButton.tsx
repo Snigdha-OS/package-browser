@@ -1,3 +1,7 @@
+import {
+    JSX
+} from 'react';
+
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
 interface ExpandButtonProps {
@@ -5,7 +9,7 @@ interface ExpandButtonProps {
   onClick: () => void;
 }
 
-export function ExpandButton({ expanded, onClick }: ExpandButtonProps) {
+export function ExpandButton({ expanded, onClick }: ExpandButtonProps): JSX.Element {
   return (
     <button
       onClick={onClick}

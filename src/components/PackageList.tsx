@@ -27,8 +27,9 @@ export function PackageList({
     );
 
     const sortedPackages = useMemo(
-        () => [...packages].sort((a, b) => a.name.localeCompare(b.name)),
-        [packages]
+        () => [...packages].sort(
+            (a, b) => a.name.localeCompare(b.name)
+        ), [packages]
     );
 
     return (

@@ -23,7 +23,8 @@ export function Header({
     const usedRepositories = new Set(Object.values(MIRRORS).map(mirror => mirror.repository));
     
     const filteredRepository = Object.keys(Repository).reduce((acc, key) => {
-        // Говно-код :D
+        // This code is flawed because it explicitly checks for 'ALL', reducing flexibility.
+        // A more generic approach should be used to filter unused repositories while preserving 'ALL'.
         if ((key === 'ALL') || usedRepositories.has(Repository[key as keyof typeof Repository])) acc[key] = Repository[key as keyof typeof Repository];
         return acc;
     }, {} as Record<string, string>);

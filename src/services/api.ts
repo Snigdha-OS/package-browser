@@ -4,14 +4,10 @@ import {
 } from '../types';
 
 // Define the mirrors from which packages will be fetched
-const MIRRORS: Record<string, {
+export const MIRRORS: Record<string, {
     url: string;
     repository: Repository;
 }> = {
-    /**
-     * Сейчас данный код будет удобным вариантом,
-     * чтобы убрать убирать пустые (неиспользуемые) репозитории из главной страницы
-     */
     'core': {
         url: 'https://raw.githubusercontent.com/Snigdha-OS/snigdhaos-core/refs/heads/master/packages.txt',
         repository: ('core' as Repository)

@@ -4,7 +4,7 @@ import {
 } from '../types';
 
 // Define the mirrors from which packages will be fetched
-const MIRRORS: Record<string, {
+export const MIRRORS: Record<string, {
     url: string;
     repository: Repository;
 }> = {

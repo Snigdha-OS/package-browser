@@ -1,5 +1,6 @@
 import {
-    JSX
+    JSX,
+    useMemo
 } from 'react';
 
 import {
@@ -25,7 +26,10 @@ export function PackageList({
         </div>
     );
 
-    const sortedPackages = [...packages].sort((a, b) => a.name.localeCompare(b.name));
+    const sortedPackages = useMemo(
+        () => [...packages].sort((a, b) => a.name.localeCompare(b.name)),
+        [packages]
+    );
 
     return (
         <div className="grid gap-4">

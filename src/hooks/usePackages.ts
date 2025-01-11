@@ -2,7 +2,12 @@ import { useState, useEffect, useCallback } from 'react';
 import { Package } from '../types';
 import { fetchPackages } from '../services/api';
 
-export function usePackages() {
+export function usePackages(): {
+    packages: Package[];
+    loading: boolean;
+    error: string | null;
+    retryLoading: () => void;
+} {
   const [packages, setPackages] = useState<Package[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);

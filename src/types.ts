@@ -7,6 +7,9 @@ export enum Repository {
     Multilib  = 'multilib'
 }
 
+// Type alias for UI themes
+export type Theme = ('light' | 'dark');
+
 // Interface representing a single package
 export interface Package {
   /** The name of the package */

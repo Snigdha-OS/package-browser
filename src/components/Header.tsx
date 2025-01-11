@@ -1,3 +1,7 @@
+import {
+    JSX
+} from 'react';
+
 import { ThemeToggle } from './ThemeToggle';
 import { Logo } from './Logo';
 

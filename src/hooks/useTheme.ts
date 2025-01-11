@@ -1,8 +1,13 @@
 import { useState, useEffect } from 'react';
 
-type Theme = 'light' | 'dark';
+import {
+    Theme
+} from '../types';
 
-export function useTheme() {
+export function useTheme(): {
+    theme: Theme;
+    toggleTheme: () => void;
+} {
   const getInitialTheme = (): Theme => {
     const savedTheme = localStorage.getItem('theme') as Theme;
     if (savedTheme === 'dark' || savedTheme === 'light') return savedTheme;

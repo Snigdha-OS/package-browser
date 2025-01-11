@@ -1,10 +1,14 @@
+import {
+    JSX
+} from 'react';
+
 import { Search } from 'lucide-react';
 
 interface SearchBarProps {
   value: string;
   onChange: (value: string) => void;
-  selectedRepository: 'core' | 'extra' | 'all';
-  onFilterChange: (repo: 'core' | 'extra' | 'all') => void;
+  //selectedRepository: 'core' | 'extra' | 'all';
+  //onFilterChange: (repo: 'core' | 'extra' | 'all') => void;
 }
 
 export function SearchBar({
@@ -12,7 +16,7 @@ export function SearchBar({
   onChange,
   // selectedRepository,
   // onFilterChange,
-}: SearchBarProps) {
+}: SearchBarProps): JSX.Element {
   return (
     <div className="relative w-full max-w-md mx-auto">
       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">

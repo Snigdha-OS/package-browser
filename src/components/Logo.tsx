@@ -1,4 +1,8 @@
-export function Logo() {
+import {
+    JSX
+} from 'react';
+
+export function Logo(): JSX.Element {
   return (
     <div className="flex items-center gap-3">
       {/* Replace this SVG with your custom logo */}

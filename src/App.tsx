@@ -1,4 +1,9 @@
-import { useState, useEffect } from 'react';
+import {
+    useState,
+    useEffect,
+    JSX
+} from 'react';
+
 import { Header } from './components/Header';
 import { SearchBar } from './components/SearchBar';
 import { PackageList } from './components/PackageList';
@@ -8,7 +13,7 @@ import {
     Repository
 } from './types';
 
-export default function App() {
+export default function App(): JSX.Element {
   const { packages, loading, error } = usePackages();
   const [search, setSearch] = useState('');
   const [selectedRepository, setSelectedRepository] = useState('all');

@@ -1,4 +1,8 @@
-import { useState } from 'react';
+import {
+    useState,
+    JSX
+} from 'react';
+
 import { Boxes } from 'lucide-react';
 import { Package } from '../../types';
 import { InstallGuide } from '../InstallGuide';
@@ -9,7 +13,7 @@ interface PackageCardProps {
   package: Package;
 }
 
-export function PackageCard({ package: pkg }: PackageCardProps) {
+export function PackageCard({ package: pkg }: PackageCardProps): JSX.Element {
   const [expanded, setExpanded] = useState(false);
 
   return (

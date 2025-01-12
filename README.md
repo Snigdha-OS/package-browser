@@ -50,8 +50,10 @@ package-browser/
 │   ├── i18n.tsx
 │   ├── index.css
 │   ├── locales
+│   │   ├── index.tsx
 │   │   ├── en.tsx
 │   │   └── uk.tsx
+│   │   ├── pl.tsx
 │   ├── main.tsx
 │   ├── services
 │   │   └── api.ts

@@ -44,6 +44,7 @@ export const ENGLISH = {
             "retry-fetching-packages": "Retry"
         },
 
-        "no-packages-found": "No packages found matching your search."
+        "no-packages-found": "No packages found matching your search.",
+        "footer": "Data Source:"
     }
 };

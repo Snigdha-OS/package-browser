@@ -44,6 +44,7 @@ export const UKRAINIAN = {
             "retry-fetching-packages": "Спробувати ще раз"
         },
 
-        "no-packages-found": "Не знайдено жодного пакета, що відповідає вашому запиту."
+        "no-packages-found": "Не знайдено жодного пакета, що відповідає вашому запиту.",
+        "footer": "Джерело даних:"
     }
 };

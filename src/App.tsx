@@ -85,7 +85,7 @@ export default function App(): JSX.Element {
                 () => window.location.reload()
               } className="mt-2 inline-block text-sm text-nord-10 hover:underline">{translate("App.error.retry-fetching-packages")}</button>
           </div>
-        ) : filteredPackages.length === 0 ? (
+        ) : (count === 0) ? (
           // Empty State
           <div className="text-center text-nord-3 dark:text-nord-4 mt-12">
             <p>{translate("App.no-packages-found")}</p>
@@ -99,7 +99,7 @@ export default function App(): JSX.Element {
       <footer className="bg-nord-5 dark:bg-nord-1 border-t border-nord-4 dark:border-nord-2 mt-12 transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <p className="text-center text-sm text-nord-3 dark:text-nord-4">
-            Data Source:{' '}
+            {translate("App.footer")}{' '}
             <a
               href="https://github.com/Snigdha-OS/snigdhaos-core"
               className="text-nord-10 hover:text-nord-9 dark:text-nord-8 dark:hover:text-nord-7"

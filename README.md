@@ -52,8 +52,8 @@ package-browser/
 │   ├── locales
 │   │   ├── index.tsx
 │   │   ├── en.tsx
-│   │   └── uk.tsx
-│   │   ├── pl.tsx
+│   │   ├── uk.tsx
+│   │   └── pl.tsx
 │   ├── main.tsx
 │   ├── services
 │   │   └── api.ts

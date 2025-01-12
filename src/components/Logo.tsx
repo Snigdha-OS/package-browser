@@ -2,6 +2,10 @@ import {
     JSX
 } from 'react';
 
+import {
+    translate
+} from '../i18n';
+
 export function Logo(): JSX.Element {
   return (
     <div className="flex items-center gap-3">
@@ -22,10 +26,8 @@ export function Logo(): JSX.Element {
         </svg>
       </div>
       <div>
-        <h1 className="text-2xl font-bold tracking-tight">Snigdha OS Package List</h1>
-        <p className="text-nord-4 text-sm mt-1">
-          Browse and search through the official Snigdha OS package repository
-        </p>
+        <h1 className="text-2xl font-bold tracking-tight">{translate("Logo.title")}</h1>
+        <p className="text-nord-4 text-sm mt-1">{translate("Logo.description")}</p>
       </div>
     </div>
   );

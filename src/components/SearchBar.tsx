@@ -4,6 +4,10 @@ import {
 
 import { Search } from 'lucide-react';
 
+import {
+    translate
+} from '../i18n';
+
 interface SearchBarProps {
   value: string;
   onChange: (value: string) => void;
@@ -26,7 +30,7 @@ export function SearchBar({
         type="text"
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        placeholder="Search packages..."
+        placeholder={translate("SearchBar.placeholder")}
         className="block w-full pl-10 pr-4 py-3 border-2 border-nord-4 dark:border-nord-2 rounded-xl bg-nord-5 dark:bg-nord-1 focus:ring-2 focus:ring-nord-8 focus:border-transparent text-nord-0 dark:text-nord-6 placeholder-nord-3 dark:placeholder-nord-4 transition-all ease-in-out duration-200 shadow-md hover:shadow-lg"
       />
       

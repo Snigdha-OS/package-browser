@@ -13,6 +13,10 @@ import {
     Repository
 } from './types';
 
+import {
+    translate
+} from './i18n';
+
 export default function App(): JSX.Element {
   const { packages, loading, error } = usePackages();
   const [search, setSearch] = useState('');
@@ -47,6 +51,8 @@ export default function App(): JSX.Element {
     setSelectedRepository(repo);
   };
 
+  const count = filteredPackages.length;
+
   return (
     <div className="min-h-screen bg-nord-6 dark:bg-nord-0 transition-colors" role="main">
       <Header onRepositoryChange={handleRepositoryFilterChange} />
@@ -59,26 +65,30 @@ export default function App(): JSX.Element {
 
         {/* Package Counter */}
         <div className="mb-4 flex items-center justify-between">
-          <p className="text-sm text-nord-3 dark:text-nord-4" aria-live="polite">
-            Showing {filteredPackages.length} package{filteredPackages.length !== 1 ? 's' : ''}
-          </p>
+          <p className="text-sm text-nord-3 dark:text-nord-4" aria-live="polite">{(count === 1) ? translate("App.package_count.single", {
+              count
+          }) : (count >= 2) && (count <= 4) ? translate("App.package_count.multiple", {
+              count
+          }) : translate("App.package_count.plural", {
+              count
+          })}</p>
         </div>
 
         {/* Error State */}
         {error ? (
           <div className="rounded-lg bg-nord-11/10 dark:bg-nord-11/20 p-4 text-nord-11" role="alert">
-            <p>An error occurred while fetching packages: {error}</p>
-            <button
-              onClick={() => window.location.reload()}
-              className="mt-2 inline-block text-sm text-nord-10 hover:underline"
-            >
-              Retry
-            </button>
+            <p>{translate("App.error.fetching-packages", {
+              error
+            })}</p>
+
+            <button onClick={
+                () => window.location.reload()
+              } className="mt-2 inline-block text-sm text-nord-10 hover:underline">{translate("App.error.retry-fetching-packages")}</button>
           </div>
         ) : filteredPackages.length === 0 ? (
           // Empty State
           <div className="text-center text-nord-3 dark:text-nord-4 mt-12">
-            <p>No packages found matching your search.</p>
+            <p>{translate("App.no-packages-found")}</p>
           </div>
         ) : (
           // Package List

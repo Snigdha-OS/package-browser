@@ -5,6 +5,10 @@ import {
 
 import { Terminal, Copy, Check } from 'lucide-react';
 
+import {
+    translate
+} from '../i18n';
+
 interface InstallGuideProps {
   packageName: string;
 }
@@ -25,20 +29,13 @@ export function InstallGuide({ packageName }: InstallGuideProps): JSX.Element {
       {/* Title Section */}
       <div className="flex items-center gap-3 mb-4">
         <Terminal className="h-5 w-5 text-nord-9 dark:text-nord-7" />
-        <span className="text-nord-2 dark:text-nord-5 text-sm font-semibold uppercase tracking-wide">
-          Installation Command
-        </span>
+        <span className="text-nord-2 dark:text-nord-5 text-sm font-semibold uppercase tracking-wide">{translate("InstallGuide.installation-command")}</span>
       </div>
 
       {/* Command Display Section */}
       <div className="flex items-center justify-between bg-nord-4 dark:bg-nord-2 rounded-lg px-5 py-3">
         <code className="text-nord-8 dark:text-nord-6 font-mono text-sm truncate">{command}</code>
-        <button
-          onClick={copyCommand}
-          className="flex items-center justify-center w-8 h-8 rounded-full bg-nord-3 hover:bg-nord-7 dark:bg-nord-5 dark:hover:bg-nord-8 transition-colors"
-          title={copied ? 'Copied!' : 'Copy to clipboard'}
-          aria-label={copied ? 'Copied' : 'Copy command'}
-        >
+        <button onClick={copyCommand} className="flex items-center justify-center w-8 h-8 rounded-full bg-nord-3 hover:bg-nord-7 dark:bg-nord-5 dark:hover:bg-nord-8 transition-colors" title={copied ? translate("InstallGuide.copy.success") : translate("InstallGuide.copy.prompt")}>
           {copied ? (
             <Check className="h-4 w-4 text-nord-6 dark:text-nord-0" />
           ) : (

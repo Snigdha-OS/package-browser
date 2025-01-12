@@ -7,6 +7,10 @@ import { Box, ChevronDown, ChevronUp } from 'lucide-react';
 import { Package } from '../types';
 import { InstallGuide } from './InstallGuide';
 
+import {
+    translate
+} from '../i18n';
+
 interface PackageCardProps {
   package: Package;
 }
@@ -49,12 +53,12 @@ export function PackageCard({ package: pkg }: PackageCardProps): JSX.Element {
               {expanded ? (
                 <>
                   <ChevronUp className="h-5 w-5 animate-bounce" />
-                  Hide Installation
+                  {translate("PackageCard.hide-installation")}
                 </>
               ) : (
                 <>
                   <ChevronDown className="h-5 w-5 animate-bounce" />
-                  Show Installation
+                  {translate("PackageCard.show-installation")}
                 </>
               )}
             </button>

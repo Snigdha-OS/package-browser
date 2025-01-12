@@ -10,6 +10,12 @@ export enum Repository {
 // Type alias for UI themes
 export type Theme = ('light' | 'dark');
 
+// Enumeration of supported languages
+export enum Languages {
+    EN = "English",
+    UK = "Українська"
+}
+
 // Interface representing a single package
 export interface Package {
   /** The name of the package */

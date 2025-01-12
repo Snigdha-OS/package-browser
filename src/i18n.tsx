@@ -13,6 +13,10 @@ import {
     UKRAINIAN
 } from './locales/uk';
 
+import {
+    POLISH
+} from './locales/pl';
+
 const resources = {
     en: {
         translation: ENGLISH
@@ -20,6 +24,10 @@ const resources = {
 
     uk: {
         translation: UKRAINIAN
+    },
+
+    pl: {
+        translation: POLISH
     }
 };
 

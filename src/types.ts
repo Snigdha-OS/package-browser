@@ -13,7 +13,8 @@ export type Theme = ('light' | 'dark');
 // Enumeration of supported languages
 export enum Languages {
     EN = "English",
-    UK = "Українська"
+    UK = "Українська",
+    PL = "Polski"
 }
 
 // Interface representing a single package

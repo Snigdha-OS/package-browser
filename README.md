@@ -4,7 +4,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="License: MIT"></a>  
   <a href="https://github.com/Snigdha-OS/package-browser/releases"><img src="https://img.shields.io/github/package-json/v/Snigdha-OS/package-browser?style=for-the-badge" alt="Version"></a>  
   <a href="https://github.com/Snigdha-OS/package-browser/issues"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=for-the-badge" alt="Contributions Welcome"></a>  
-  <a href="https://github.com/Snigdha-OS/package-browser/actions"><img src="https://img.shields.io/github/actions/workflow/status/Snigdha-OS/package-browser/ci.yml?branch=main&style=for-the-badge" alt="Build Status"></a>  
+  <!-- <a href="https://github.com/Snigdha-OS/package-browser/actions"><img src="https://img.shields.io/github/actions/workflow/status/Snigdha-OS/package-browser/ci.yml?branch=main&style=for-the-badge" alt="Build Status"></a>   -->
   <a href="https://snigdha-os.github.io"><img src="https://img.shields.io/website?url=https%3A%2F%2Fsnigdha-os.github.io&style=for-the-badge" alt="Website Status"></a>  
 </p>  
 

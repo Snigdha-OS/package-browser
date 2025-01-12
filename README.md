@@ -1,10 +1,10 @@
 # 📦 Package Browser - Search Packages  
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)  
-[![Version](https://img.shields.io/github/package-json/v/Snigdha-OS/package-browser)](https://github.com/Snigdha-OS/package-browser/releases)  
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/Snigdha-OS/package-browser/issues)  
-[![Build Status](https://img.shields.io/github/actions/workflow/status/Snigdha-OS/package-browser/ci.yml?branch=main)](https://github.com/Snigdha-OS/package-browser/actions)  
-[![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fsnigdha-os.github.io)](https://snigdha-os.github.io)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)  
+[![Version](https://img.shields.io/github/package-json/v/Snigdha-OS/package-browser?style=flat-square)](https://github.com/Snigdha-OS/package-browser/releases)  
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/Snigdha-OS/package-browser/issues)  
+[![Build Status](https://img.shields.io/github/actions/workflow/status/Snigdha-OS/package-browser/ci.yml?branch=main&style=flat-square)](https://github.com/Snigdha-OS/package-browser/actions)  
+[![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fsnigdha-os.github.io&style=flat-square)](https://snigdha-os.github.io)  
 
 🚀 **Package Browser** is a user-friendly web application designed to simplify browsing, searching, and exploring packages available for Snigdha OS. This tool helps users find the right software with ease, whether for development, daily use, or penetration testing.  
 

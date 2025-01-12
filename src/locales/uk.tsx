@@ -1,4 +1,4 @@
-export const UKRAINIAN = {
+export const UK = {
     // src/components/Header.tsx
     Header: {
         "all-repositories": "Усі репозиторії"

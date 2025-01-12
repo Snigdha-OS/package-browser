@@ -1,4 +1,4 @@
-export const POLISH = {
+export const PL = {
     // src/components/Header.tsx
     Header: {
         "all-repositories": "Wszystkie repozytoria"

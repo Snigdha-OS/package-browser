@@ -6,30 +6,18 @@ import {
 } from "react-i18next";
 
 import {
-    ENGLISH
-} from './locales/en';
+    LOCALES
+} from './locales';
 
-import {
-    UKRAINIAN
-} from './locales/uk';
+const resources = Object.fromEntries(
+    Object.entries(LOCALES).map(([key, value]) => [
+        key.toLowerCase(),
 
-import {
-    POLISH
-} from './locales/pl';
-
-const resources = {
-    en: {
-        translation: ENGLISH
-    },
-
-    uk: {
-        translation: UKRAINIAN
-    },
-
-    pl: {
-        translation: POLISH
-    }
-};
+        {
+            translation: value
+        }
+    ])
+);
 
 i18n.use(initReactI18next).use(LanguageDetector).init({
     resources,

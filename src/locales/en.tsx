@@ -1,4 +1,4 @@
-export const ENGLISH = {
+export const EN = {
     // src/components/Header.tsx
     Header: {
         "all-repositories": "All Repositories"

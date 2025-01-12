@@ -20,22 +20,24 @@
 ```plaintext  
 package-browser/  
 .
+├── CODE_OF_CONDUCT.md
+├── config.sh
 ├── eslint.config.js
 ├── index.html
 ├── package.json
-├── package-lock.json
 ├── pnpm-lock.yaml
 ├── postcss.config.js
+├── public
+│   ├── favicon.ico
+│   └── snigdhaos-og-image.png
+├── push.sh
+├── README.md
 ├── src
 │   ├── App.tsx
 │   ├── components
 │   │   ├── Header.tsx
 │   │   ├── InstallGuide.tsx
 │   │   ├── Logo.tsx
-│   │   ├── PackageCard
-│   │   │   ├── Badge.tsx
-│   │   │   ├── ExpandButton.tsx
-│   │   │   └── index.tsx
 │   │   ├── PackageCard.tsx
 │   │   ├── PackageList.tsx
 │   │   ├── SearchBar.tsx
@@ -43,7 +45,11 @@ package-browser/
 │   ├── hooks
 │   │   ├── usePackages.ts
 │   │   └── useTheme.ts
+│   ├── i18n.tsx
 │   ├── index.css
+│   ├── locales
+│   │   ├── en.tsx
+│   │   └── uk.tsx
 │   ├── main.tsx
 │   ├── services
 │   │   └── api.ts

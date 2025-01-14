@@ -9,33 +9,27 @@ export const MIRRORS: Record<string, {
     repository: Repository;
 }> = {
     'core': {
-        url: 'https://raw.githubusercontent.com/Snigdha-OS/snigdhaos-core/refs/heads/master/packages.txt',
+        url: 'https://raw.githubusercontent.com/Snigdha-OS/snigdhaos-core/refs/heads/master/packages.json',
         repository: ('core' as Repository)
     },
 
     'extra': {
-        url: 'https://raw.githubusercontent.com/Snigdha-OS/snigdhaos-extra/refs/heads/master/packages.txt',
+        url: 'https://raw.githubusercontent.com/Snigdha-OS/snigdhaos-extra/refs/heads/master/packages.json',
         repository: ('extra' as Repository)
     }
 }
 
-// Fetch data from a single mirror (Core or Extra repository)
+// Fetch data from a single mirror
 async function fetchFromMirror(url: string, repository: Repository): Promise<Package[]> {
     const response = await fetch(url);
-    const text     = await response.text();
+    const data     = await response.json();
 
-    // Parse the text file content and return a list of packages
-    return text.split('\n').filter(Boolean).map((line) => {
-        const [
-            name,
-            version,
-            ...description
-        ] = line.split(' ');
-
+    // Parse the json file content and return a list of packages
+    return data.map((item: any) => {
         return {
-            name,
-            version,
-            description: description.join(' '),
+            name: item.name,
+            version: item.version,
+            description: item.description,
             repository
         };
     });

@@ -9,12 +9,12 @@ export const MIRRORS: Record<string, {
     repository: Repository;
 }> = {
     'core': {
-        url: 'https://raw.githubusercontent.com/Snigdha-OS/snigdhaos-core/refs/heads/master/packages.json',
+        url: 'https://raw.githubusercontent.com/Snigdha-OS/snigdhaos-pkgbuilds/refs/heads/master/snigdhaos-core/packages.json',
         repository: ('core' as Repository)
     },
 
     'extra': {
-        url: 'https://raw.githubusercontent.com/Snigdha-OS/snigdhaos-extra/refs/heads/master/packages.json',
+        url: 'https://raw.githubusercontent.com/Snigdha-OS/snigdhaos-pkgbuilds/refs/heads/master/snigdhaos-extra/packages.json',
         repository: ('extra' as Repository)
     }
 }
